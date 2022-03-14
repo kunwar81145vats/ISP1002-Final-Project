@@ -13,17 +13,29 @@ class SuccessViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewOrdersButtonAction(_ sender: Any) {
+        
+        if let tabController = self.presentingViewController as? UITabBarController
+        {
+            if let currentTab = tabController.selectedViewController as? UINavigationController
+            {
+                currentTab.popToRootViewController(animated: false)
+            }
+            tabController.selectedIndex = 2
+        }
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func crossButtonAction(_ sender: Any) {
+        
+        if let navController = (self.presentingViewController as? UITabBarController)?.selectedViewController as? UINavigationController
+        {
+            navController.popToRootViewController(animated: false)
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
