@@ -15,14 +15,52 @@
                     <view key="view" contentMode="scaleToFill" id="MZO-z4-fvv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-vm-aD8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="dsU-Lb-snO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="v28-8u-Ie0" id="lnp-fA-pN8"/>
+                                    <outlet property="delegate" destination="v28-8u-Ie0" id="f7w-8b-rYc"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWD-Er-NVY">
+                                <rect key="frame" x="20" y="748" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LmJ-rV-jRm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CHECKOUT">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rgA-EP-Vu8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rgA-EP-Vu8" firstAttribute="bottom" secondItem="cZc-vm-aD8" secondAttribute="bottom" id="6B1-ep-L2q"/>
+                            <constraint firstItem="rgA-EP-Vu8" firstAttribute="trailing" secondItem="dWD-Er-NVY" secondAttribute="trailing" constant="20" id="B7S-zu-rKL"/>
+                            <constraint firstItem="cZc-vm-aD8" firstAttribute="leading" secondItem="rgA-EP-Vu8" secondAttribute="leading" id="LSm-FY-LSf"/>
+                            <constraint firstItem="rgA-EP-Vu8" firstAttribute="trailing" secondItem="cZc-vm-aD8" secondAttribute="trailing" id="TUG-Do-uxy"/>
+                            <constraint firstItem="rgA-EP-Vu8" firstAttribute="bottom" secondItem="dWD-Er-NVY" secondAttribute="bottom" constant="20" id="gOf-eq-acn"/>
+                            <constraint firstItem="cZc-vm-aD8" firstAttribute="top" secondItem="rgA-EP-Vu8" secondAttribute="top" id="h18-CI-iQo"/>
+                            <constraint firstItem="dWD-Er-NVY" firstAttribute="leading" secondItem="rgA-EP-Vu8" secondAttribute="leading" constant="20" id="rRv-h3-4Io"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p9a-L5-zd1"/>
+                    <connections>
+                        <outlet property="checkoutButton" destination="dWD-Er-NVY" id="r1A-E5-eZM"/>
+                        <outlet property="tableView" destination="cZc-vm-aD8" id="LBa-Q9-aZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcf-un-os8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="556"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="555.80357142857144"/>
         </scene>
         <!--Orders View Controller-->
         <scene sceneID="RN2-zl-9eL">
@@ -31,14 +69,52 @@
                     <view key="view" contentMode="scaleToFill" id="i4o-u7-HPn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-MB-9ec">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="cKn-4k-lSn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="oeb-ei-FX0" id="ZZb-vn-6GU"/>
+                                    <outlet property="delegate" destination="oeb-ei-FX0" id="fqe-gu-Evw"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzU-kb-Tnh">
+                                <rect key="frame" x="20" y="748" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4YJ-Tg-bod"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CHECKOUT">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OH1-Al-Sdb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tzU-kb-Tnh" firstAttribute="leading" secondItem="OH1-Al-Sdb" secondAttribute="leading" constant="20" id="1Co-Ip-5hI"/>
+                            <constraint firstItem="OH1-Al-Sdb" firstAttribute="trailing" secondItem="tzU-kb-Tnh" secondAttribute="trailing" constant="20" id="M0I-qA-3Om"/>
+                            <constraint firstItem="OH1-Al-Sdb" firstAttribute="bottom" secondItem="2Zm-MB-9ec" secondAttribute="bottom" id="Omq-1H-beK"/>
+                            <constraint firstItem="2Zm-MB-9ec" firstAttribute="top" secondItem="OH1-Al-Sdb" secondAttribute="top" id="bWg-Kb-lCv"/>
+                            <constraint firstItem="2Zm-MB-9ec" firstAttribute="leading" secondItem="OH1-Al-Sdb" secondAttribute="leading" id="nRe-iT-eU5"/>
+                            <constraint firstItem="OH1-Al-Sdb" firstAttribute="bottom" secondItem="tzU-kb-Tnh" secondAttribute="bottom" constant="20" id="v5n-kg-Om0"/>
+                            <constraint firstItem="OH1-Al-Sdb" firstAttribute="trailing" secondItem="2Zm-MB-9ec" secondAttribute="trailing" id="xQK-M9-5bu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s2q-s1-y0g"/>
+                    <connections>
+                        <outlet property="checkoutButton" destination="tzU-kb-Tnh" id="v0I-Wa-0Lf"/>
+                        <outlet property="tableView" destination="2Zm-MB-9ec" id="T3Q-0i-Aak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekq-bI-4dx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="1254"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="1253.5714285714284"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Pgg-y2-523">
@@ -47,10 +123,48 @@
                     <view key="view" contentMode="scaleToFill" id="EPW-96-UTR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-Eg-QMY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="uCX-nX-T8e">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="kOZ-Ar-Hwj" id="KqX-NM-IJY"/>
+                                    <outlet property="delegate" destination="kOZ-Ar-Hwj" id="Vn2-Ny-Rch"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mos-86-HF4">
+                                <rect key="frame" x="20" y="748" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Jg9-Pb-Ihy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CHECKOUT">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="X63-sH-P0P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mos-86-HF4" firstAttribute="leading" secondItem="X63-sH-P0P" secondAttribute="leading" constant="20" id="HlW-7m-Bv5"/>
+                            <constraint firstItem="X63-sH-P0P" firstAttribute="trailing" secondItem="Mos-86-HF4" secondAttribute="trailing" constant="20" id="Qf8-ke-hCI"/>
+                            <constraint firstItem="DMa-Eg-QMY" firstAttribute="leading" secondItem="X63-sH-P0P" secondAttribute="leading" id="fAB-GS-SvW"/>
+                            <constraint firstItem="X63-sH-P0P" firstAttribute="bottom" secondItem="Mos-86-HF4" secondAttribute="bottom" constant="20" id="foy-gN-dZV"/>
+                            <constraint firstItem="X63-sH-P0P" firstAttribute="trailing" secondItem="DMa-Eg-QMY" secondAttribute="trailing" id="fs9-cO-kZF"/>
+                            <constraint firstItem="X63-sH-P0P" firstAttribute="bottom" secondItem="DMa-Eg-QMY" secondAttribute="bottom" id="jUR-Ji-BfC"/>
+                            <constraint firstItem="DMa-Eg-QMY" firstAttribute="top" secondItem="X63-sH-P0P" secondAttribute="top" id="tdp-bo-nU1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r34-gx-tEX"/>
+                    <connections>
+                        <outlet property="checkoutButton" destination="Mos-86-HF4" id="5BY-D0-R3e"/>
+                        <outlet property="tableView" destination="DMa-Eg-QMY" id="OUp-Va-kLU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nw6-pI-4rB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,6 +198,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uy8-Zo-VWI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
