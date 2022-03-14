@@ -18,7 +18,6 @@ class FavouritesViewController: UIViewController {
         checkoutButton.layer.cornerRadius = 5
     }
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
