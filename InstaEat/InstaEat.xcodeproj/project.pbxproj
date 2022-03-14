@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950BF8CC27DED44700AFAA3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8CB27DED44700AFAA3A /* HomeViewController.swift */; };
+		950BF8CE27DED45800AFAA3A /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8CD27DED45800AFAA3A /* FavouritesViewController.swift */; };
+		950BF8D027DED46200AFAA3A /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8CF27DED46200AFAA3A /* OrdersViewController.swift */; };
+		950BF8D227DED46B00AFAA3A /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D127DED46B00AFAA3A /* CheckoutViewController.swift */; };
+		950BF8D427DED48500AFAA3A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D327DED48500AFAA3A /* Common.swift */; };
+		950BF8D627DED48F00AFAA3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D527DED48F00AFAA3A /* Constants.swift */; };
+		950BF8D827DED4DA00AFAA3A /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D727DED4DA00AFAA3A /* SuccessViewController.swift */; };
 		95851D6427DECF8A006CBA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6327DECF8A006CBA06 /* AppDelegate.swift */; };
 		95851D6627DECF8A006CBA06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6527DECF8A006CBA06 /* SceneDelegate.swift */; };
-		95851D6827DECF8A006CBA06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6727DECF8A006CBA06 /* ViewController.swift */; };
 		95851D6B27DECF8A006CBA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95851D6927DECF8A006CBA06 /* Main.storyboard */; };
 		95851D6E27DECF8A006CBA06 /* InstaEat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6C27DECF8A006CBA06 /* InstaEat.xcdatamodeld */; };
 		95851D7027DECF8A006CBA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95851D6F27DECF8A006CBA06 /* Assets.xcassets */; };
@@ -17,10 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950BF8CB27DED44700AFAA3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		950BF8CD27DED45800AFAA3A /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		950BF8CF27DED46200AFAA3A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		950BF8D127DED46B00AFAA3A /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		950BF8D327DED48500AFAA3A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		950BF8D527DED48F00AFAA3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		950BF8D727DED4DA00AFAA3A /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		95851D6027DECF8A006CBA06 /* InstaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95851D6327DECF8A006CBA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95851D6527DECF8A006CBA06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95851D6727DECF8A006CBA06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95851D6A27DECF8A006CBA06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95851D6D27DECF8A006CBA06 /* InstaEat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstaEat.xcdatamodel; sourceTree = "<group>"; };
 		95851D6F27DECF8A006CBA06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +51,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950BF8C727DED3FC00AFAA3A /* VewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				950BF8CB27DED44700AFAA3A /* HomeViewController.swift */,
+				950BF8D727DED4DA00AFAA3A /* SuccessViewController.swift */,
+				950BF8CF27DED46200AFAA3A /* OrdersViewController.swift */,
+				950BF8CD27DED45800AFAA3A /* FavouritesViewController.swift */,
+				950BF8D127DED46B00AFAA3A /* CheckoutViewController.swift */,
+			);
+			path = VewControllers;
+			sourceTree = "<group>";
+		};
+		950BF8C827DED40600AFAA3A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				950BF8D327DED48500AFAA3A /* Common.swift */,
+				950BF8D527DED48F00AFAA3A /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		950BF8C927DED40D00AFAA3A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				95851D6927DECF8A006CBA06 /* Main.storyboard */,
+				95851D7127DECF8A006CBA06 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		950BF8CA27DED42900AFAA3A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				95851D6327DECF8A006CBA06 /* AppDelegate.swift */,
+				95851D6527DECF8A006CBA06 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		95851D5727DECF8A006CBA06 = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +109,11 @@
 		95851D6227DECF8A006CBA06 /* InstaEat */ = {
 			isa = PBXGroup;
 			children = (
-				95851D6327DECF8A006CBA06 /* AppDelegate.swift */,
-				95851D6527DECF8A006CBA06 /* SceneDelegate.swift */,
-				95851D6727DECF8A006CBA06 /* ViewController.swift */,
-				95851D6927DECF8A006CBA06 /* Main.storyboard */,
+				950BF8CA27DED42900AFAA3A /* Delegates */,
+				950BF8C927DED40D00AFAA3A /* UI */,
+				950BF8C827DED40600AFAA3A /* Common */,
+				950BF8C727DED3FC00AFAA3A /* VewControllers */,
 				95851D6F27DECF8A006CBA06 /* Assets.xcassets */,
-				95851D7127DECF8A006CBA06 /* LaunchScreen.storyboard */,
 				95851D7427DECF8A006CBA06 /* Info.plist */,
 				95851D6C27DECF8A006CBA06 /* InstaEat.xcdatamodeld */,
 			);
@@ -141,10 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95851D6827DECF8A006CBA06 /* ViewController.swift in Sources */,
+				950BF8D427DED48500AFAA3A /* Common.swift in Sources */,
+				950BF8CC27DED44700AFAA3A /* HomeViewController.swift in Sources */,
+				950BF8D027DED46200AFAA3A /* OrdersViewController.swift in Sources */,
 				95851D6427DECF8A006CBA06 /* AppDelegate.swift in Sources */,
 				95851D6E27DECF8A006CBA06 /* InstaEat.xcdatamodeld in Sources */,
+				950BF8CE27DED45800AFAA3A /* FavouritesViewController.swift in Sources */,
 				95851D6627DECF8A006CBA06 /* SceneDelegate.swift in Sources */,
+				950BF8D227DED46B00AFAA3A /* CheckoutViewController.swift in Sources */,
+				950BF8D827DED4DA00AFAA3A /* SuccessViewController.swift in Sources */,
+				950BF8D627DED48F00AFAA3A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
