@@ -4,14 +4,14 @@ Final project for the course ISP1002
 This is an app for a food ordering service.
 
 Home page
-![Home](/screenshots/home.png)
+<img src='/screenshots/home.png' width='200'>
 
 Checkout page
-![Checkout](/screenshots/checkout.png)
+<img src='/screenshots/checkout.png' width='200'>
 
 Orders page
-![Orders](/screenshots/orders.png)
+<img src='/screenshots/orders.png' width='200'>
 
 Order placed page
-![Home](/screenshots/success.png)
+<img src='/screenshots/success.png' width='200'>
 
