@@ -21,6 +21,23 @@
 		950BF8EC27DF5B3A00AFAA3A /* CheckoutItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8EB27DF5B3A00AFAA3A /* CheckoutItemCell.swift */; };
 		950BF8F027DF6DF700AFAA3A /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8EF27DF6DF700AFAA3A /* FoodItem.swift */; };
 		950BF8F227DF6E0B00AFAA3A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8F127DF6E0B00AFAA3A /* Order.swift */; };
+		950BF90427E00AC100AFAA3A /* margPizza.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F427E00AC100AFAA3A /* margPizza.jpeg */; };
+		950BF90527E00AC100AFAA3A /* fries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F527E00AC100AFAA3A /* fries.jpg */; };
+		950BF90627E00AC100AFAA3A /* coke.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F627E00AC100AFAA3A /* coke.jpg */; };
+		950BF90727E00AC100AFAA3A /* nuggets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F727E00AC100AFAA3A /* nuggets.jpg */; };
+		950BF90827E00AC100AFAA3A /* barbecue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F827E00AC100AFAA3A /* barbecue.jpg */; };
+		950BF90927E00AC100AFAA3A /* yogurt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8F927E00AC100AFAA3A /* yogurt.jpg */; };
+		950BF90A27E00AC100AFAA3A /* wings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FA27E00AC100AFAA3A /* wings.jpg */; };
+		950BF90B27E00AC100AFAA3A /* sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FB27E00AC100AFAA3A /* sandwich.jpg */; };
+		950BF90C27E00AC100AFAA3A /* hotdog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FC27E00AC100AFAA3A /* hotdog.jpg */; };
+		950BF90D27E00AC100AFAA3A /* hamBurger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FD27E00AC100AFAA3A /* hamBurger.jpg */; };
+		950BF90E27E00AC100AFAA3A /* popcorn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FE27E00AC100AFAA3A /* popcorn.jpg */; };
+		950BF90F27E00AC100AFAA3A /* burger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8FF27E00AC100AFAA3A /* burger.jpg */; };
+		950BF91027E00AC100AFAA3A /* pepPizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90027E00AC100AFAA3A /* pepPizza.jpg */; };
+		950BF91127E00AC100AFAA3A /* taco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90127E00AC100AFAA3A /* taco.jpg */; };
+		950BF91227E00AC100AFAA3A /* curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90227E00AC100AFAA3A /* curry.jpg */; };
+		950BF91327E00AC100AFAA3A /* pie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90327E00AC100AFAA3A /* pie.jpg */; };
+		950BF91727E012BB00AFAA3A /* FoodItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 950BF91627E012BB00AFAA3A /* FoodItems.json */; };
 		95851D6427DECF8A006CBA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6327DECF8A006CBA06 /* AppDelegate.swift */; };
 		95851D6627DECF8A006CBA06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6527DECF8A006CBA06 /* SceneDelegate.swift */; };
 		95851D6B27DECF8A006CBA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95851D6927DECF8A006CBA06 /* Main.storyboard */; };
@@ -44,6 +61,23 @@
 		950BF8EB27DF5B3A00AFAA3A /* CheckoutItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemCell.swift; sourceTree = "<group>"; };
 		950BF8EF27DF6DF700AFAA3A /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		950BF8F127DF6E0B00AFAA3A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		950BF8F427E00AC100AFAA3A /* margPizza.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = margPizza.jpeg; sourceTree = "<group>"; };
+		950BF8F527E00AC100AFAA3A /* fries.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fries.jpg; sourceTree = "<group>"; };
+		950BF8F627E00AC100AFAA3A /* coke.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coke.jpg; sourceTree = "<group>"; };
+		950BF8F727E00AC100AFAA3A /* nuggets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nuggets.jpg; sourceTree = "<group>"; };
+		950BF8F827E00AC100AFAA3A /* barbecue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbecue.jpg; sourceTree = "<group>"; };
+		950BF8F927E00AC100AFAA3A /* yogurt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yogurt.jpg; sourceTree = "<group>"; };
+		950BF8FA27E00AC100AFAA3A /* wings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wings.jpg; sourceTree = "<group>"; };
+		950BF8FB27E00AC100AFAA3A /* sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sandwich.jpg; sourceTree = "<group>"; };
+		950BF8FC27E00AC100AFAA3A /* hotdog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotdog.jpg; sourceTree = "<group>"; };
+		950BF8FD27E00AC100AFAA3A /* hamBurger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamBurger.jpg; sourceTree = "<group>"; };
+		950BF8FE27E00AC100AFAA3A /* popcorn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = popcorn.jpg; sourceTree = "<group>"; };
+		950BF8FF27E00AC100AFAA3A /* burger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger.jpg; sourceTree = "<group>"; };
+		950BF90027E00AC100AFAA3A /* pepPizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pepPizza.jpg; sourceTree = "<group>"; };
+		950BF90127E00AC100AFAA3A /* taco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taco.jpg; sourceTree = "<group>"; };
+		950BF90227E00AC100AFAA3A /* curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curry.jpg; sourceTree = "<group>"; };
+		950BF90327E00AC100AFAA3A /* pie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pie.jpg; sourceTree = "<group>"; };
+		950BF91627E012BB00AFAA3A /* FoodItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodItems.json; sourceTree = "<group>"; };
 		95851D6027DECF8A006CBA06 /* InstaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95851D6327DECF8A006CBA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95851D6527DECF8A006CBA06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +114,7 @@
 		950BF8C827DED40600AFAA3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				950BF8F327E009D200AFAA3A /* Food Data */,
 				950BF8EA27DF5B2400AFAA3A /* Checkout Item Cell */,
 				950BF8E427DEDD4B00AFAA3A /* OrderCell */,
 				950BF8D927DED5E600AFAA3A /* Item Cell */,
@@ -140,6 +175,30 @@
 				950BF8EB27DF5B3A00AFAA3A /* CheckoutItemCell.swift */,
 			);
 			path = "Checkout Item Cell";
+			sourceTree = "<group>";
+		};
+		950BF8F327E009D200AFAA3A /* Food Data */ = {
+			isa = PBXGroup;
+			children = (
+				950BF91627E012BB00AFAA3A /* FoodItems.json */,
+				950BF8F827E00AC100AFAA3A /* barbecue.jpg */,
+				950BF8FF27E00AC100AFAA3A /* burger.jpg */,
+				950BF8F627E00AC100AFAA3A /* coke.jpg */,
+				950BF90227E00AC100AFAA3A /* curry.jpg */,
+				950BF8F527E00AC100AFAA3A /* fries.jpg */,
+				950BF8FD27E00AC100AFAA3A /* hamBurger.jpg */,
+				950BF8FC27E00AC100AFAA3A /* hotdog.jpg */,
+				950BF8F427E00AC100AFAA3A /* margPizza.jpeg */,
+				950BF8F727E00AC100AFAA3A /* nuggets.jpg */,
+				950BF90027E00AC100AFAA3A /* pepPizza.jpg */,
+				950BF90327E00AC100AFAA3A /* pie.jpg */,
+				950BF8FE27E00AC100AFAA3A /* popcorn.jpg */,
+				950BF8FB27E00AC100AFAA3A /* sandwich.jpg */,
+				950BF90127E00AC100AFAA3A /* taco.jpg */,
+				950BF8FA27E00AC100AFAA3A /* wings.jpg */,
+				950BF8F927E00AC100AFAA3A /* yogurt.jpg */,
+			);
+			path = "Food Data";
 			sourceTree = "<group>";
 		};
 		95851D5727DECF8A006CBA06 = {
@@ -232,9 +291,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				950BF8E827DEDD6300AFAA3A /* OrderCell.xib in Resources */,
+				950BF90627E00AC100AFAA3A /* coke.jpg in Resources */,
+				950BF90927E00AC100AFAA3A /* yogurt.jpg in Resources */,
+				950BF90527E00AC100AFAA3A /* fries.jpg in Resources */,
+				950BF90F27E00AC100AFAA3A /* burger.jpg in Resources */,
+				950BF90A27E00AC100AFAA3A /* wings.jpg in Resources */,
+				950BF90727E00AC100AFAA3A /* nuggets.jpg in Resources */,
+				950BF91127E00AC100AFAA3A /* taco.jpg in Resources */,
+				950BF90C27E00AC100AFAA3A /* hotdog.jpg in Resources */,
 				95851D7327DECF8A006CBA06 /* LaunchScreen.storyboard in Resources */,
 				950BF8E327DED9AA00AFAA3A /* ItemCell.xib in Resources */,
+				950BF90427E00AC100AFAA3A /* margPizza.jpeg in Resources */,
+				950BF91327E00AC100AFAA3A /* pie.jpg in Resources */,
+				950BF90B27E00AC100AFAA3A /* sandwich.jpg in Resources */,
+				950BF91227E00AC100AFAA3A /* curry.jpg in Resources */,
+				950BF91027E00AC100AFAA3A /* pepPizza.jpg in Resources */,
+				950BF91727E012BB00AFAA3A /* FoodItems.json in Resources */,
+				950BF90E27E00AC100AFAA3A /* popcorn.jpg in Resources */,
 				95851D7027DECF8A006CBA06 /* Assets.xcassets in Resources */,
+				950BF90827E00AC100AFAA3A /* barbecue.jpg in Resources */,
+				950BF90D27E00AC100AFAA3A /* hamBurger.jpg in Resources */,
 				95851D6B27DECF8A006CBA06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

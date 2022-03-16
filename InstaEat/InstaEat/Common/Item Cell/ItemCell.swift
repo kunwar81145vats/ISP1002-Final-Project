@@ -24,6 +24,7 @@ class ItemCell: UITableViewCell {
         borderView.layer.cornerRadius = 10
         borderView.layer.borderColor = UIColor.lightGray.cgColor
         borderView.layer.borderWidth = 0.5
+        quantityUpdateView.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

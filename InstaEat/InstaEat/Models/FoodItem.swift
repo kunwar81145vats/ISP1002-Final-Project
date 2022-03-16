@@ -12,6 +12,7 @@ struct FoodItem: Equatable
     let id: Int!
     let name: String?
     let desc: String?
+    let img: String?
     
     static func == (lhs: FoodItem, rhs: FoodItem) -> Bool {
         lhs.id == rhs.id

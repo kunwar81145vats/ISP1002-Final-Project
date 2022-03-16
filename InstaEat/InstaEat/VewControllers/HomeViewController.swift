@@ -62,7 +62,31 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         {
             cell.quantityUpdateView.isHidden = false
         }
+        
+        cell.addButton.tag = indexPath.row
+        cell.increaseCountButton.tag = indexPath.row
+        cell.decreaseCountButton.tag = indexPath.row
+        
+        cell.addButton.addTarget(self, action: #selector(addItemButtonAction(_:)), for: .touchUpInside)
+        cell.increaseCountButton.addTarget(self, action: #selector(increaseItemButtonAction(_:)), for: .touchUpInside)
+        cell.decreaseCountButton.addTarget(self, action: #selector(decreaseItemButtonAction(_:)), for: .touchUpInside)
+        
         return cell
+        
+    }
+    
+    @objc func addItemButtonAction(_ sender: UIButton)
+    {
+        
+    }
+    
+    @objc func increaseItemButtonAction(_ sender: UIButton)
+    {
+        
+    }
+    
+    @objc func decreaseItemButtonAction(_ sender: UIButton)
+    {
         
     }
     
