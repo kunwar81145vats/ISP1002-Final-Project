@@ -9,11 +9,24 @@ import UIKit
 
 class CheckoutViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableViewCell!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateCountLabel()
+        tableView.rowHeight = 75
+    }
+    
+    func updateCountLabel()
+    {
+        var totalCount = 0
+        for obj in Common.shared.currentOrder?.items ?? []
+        {
+            totalCount += obj.quantity ?? 1
+        }
+        totalCountLabel.text = "\(totalCount)"
     }
     
     @IBAction func placeOrderButtonAction(_ sender: Any) {
@@ -25,18 +38,55 @@ class CheckoutViewController: UIViewController {
 
 }
 
-extension CheckoutViewController: UITableViewDataSource
+extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate
 {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return Common.shared.currentOrder?.items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutItemCell", for: indexPath) as! CheckoutItemCell
         
-        return cell
+        let foodObj = Common.shared.currentOrder?.items?[indexPath.row]
         
+        cell.nameLabel.text = foodObj?.name
+        cell.quantityLabel.text = "\(foodObj?.quantity ?? 1)"
+        
+        cell.increaseButton.tag = indexPath.row
+        cell.decreaseButton.tag = indexPath.row
+        
+        cell.increaseButton.addTarget(self, action: #selector(increaseItemButtonAction(_:)), for: .touchUpInside)
+        cell.decreaseButton.addTarget(self, action: #selector(decreaseItemButtonAction(_:)), for: .touchUpInside)
+
+        return cell
+    }
+    
+    @objc func increaseItemButtonAction(_ sender: UIButton)
+    {
+        Common.shared.currentOrder?.items?[sender.tag].quantity! += 1
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+        updateCountLabel()
+    }
+    
+    @objc func decreaseItemButtonAction(_ sender: UIButton)
+    {
+        Common.shared.currentOrder?.items?[sender.tag].quantity! -= 1
+        if Common.shared.currentOrder?.items?[sender.tag].quantity ?? 0 == 0
+        {
+            Common.shared.currentOrder?.items?.remove(at: sender.tag)
+            tableView.reloadData()
+        }
+        else
+        {
+            tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+        }
+        if Common.shared.currentOrder?.items?.count == 0
+        {
+            Common.shared.currentOrder = nil
+        }
+        updateCountLabel()
     }
     
 }

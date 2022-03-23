@@ -9,12 +9,18 @@ import UIKit
 
 class ItemCell: UITableViewCell {
    
+    @IBOutlet weak var favImageView: UIImageView!
+    @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var quantityUpdateView: UIView!
     @IBOutlet weak var increaseCountButton: UIButton!
     @IBOutlet weak var decreaseCountButton: UIButton!
+    @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var borderView: UIView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descripLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

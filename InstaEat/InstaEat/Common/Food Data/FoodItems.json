@@ -30,12 +30,6 @@
         "img": "coke.jpg"
     },
     {
-        "id": 6,
-        "name": "Ham Burger",
-        "description": "A hamburger is a food consisting of fillings —usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.",
-        "img": "hamBurger.jpg"
-    },
-    {
         "id": 7,
         "name": "Sandwich",
         "description": "A sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on or between slices of bread.",

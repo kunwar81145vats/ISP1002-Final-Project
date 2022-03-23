@@ -77,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="OPt-HZ-MNN">
-                                    <rect key="frame" x="0.0" y="159" width="414" height="137"/>
+                                    <rect key="frame" x="0.0" y="137" width="414" height="137"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w72-fk-i7f">
@@ -115,18 +115,18 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutItemCell" rowHeight="92" id="6ke-pR-8HV" customClass="CheckoutItemCell" customModule="InstaEat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="92"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutItemCell" rowHeight="70" id="6ke-pR-8HV" customClass="CheckoutItemCell" customModule="InstaEat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ke-pR-8HV" id="AdN-oi-hb5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqg-Ve-dOl">
-                                                    <rect key="frame" x="276.5" y="21" width="117.5" height="50"/>
+                                                    <rect key="frame" x="320.5" y="21" width="73.5" height="28"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-3D-Kls">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="UJa-3D-Kls" secondAttribute="height" id="UFJ-UF-Vyn"/>
                                                             </constraints>
@@ -134,7 +134,7 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="minus" title=""/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYQ-cR-rCh">
-                                                            <rect key="frame" x="67.5" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="45.5" y="0.0" width="28" height="28"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="IYQ-cR-rCh" secondAttribute="height" id="66k-gI-fbb"/>
                                                             </constraints>
@@ -142,7 +142,7 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="add" title=""/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K57-pW-ywo">
-                                                            <rect key="frame" x="55" y="0.0" width="7.5" height="50"/>
+                                                            <rect key="frame" x="33" y="0.0" width="7.5" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1K-vJ-nOE">
-                                                    <rect key="frame" x="20" y="35.5" width="47" height="21"/>
+                                                    <rect key="frame" x="20" y="24.5" width="47" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -178,6 +178,12 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Dqg-Ve-dOl" secondAttribute="bottom" constant="10" id="sKb-br-nFd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="decreaseButton" destination="UJa-3D-Kls" id="abk-qm-vlG"/>
+                                            <outlet property="increaseButton" destination="IYQ-cR-rCh" id="mwo-Gd-4oG"/>
+                                            <outlet property="nameLabel" destination="p1K-vJ-nOE" id="cHE-3E-EPq"/>
+                                            <outlet property="quantityLabel" destination="K57-pW-ywo" id="vTy-kb-tr0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -211,6 +217,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CSL-Cp-S5H"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZPK-zV-k8O" id="233-wH-6Uw"/>
+                        <outlet property="totalCountLabel" destination="kUN-AB-blH" id="c76-Nj-4K7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yq-r6-GoB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

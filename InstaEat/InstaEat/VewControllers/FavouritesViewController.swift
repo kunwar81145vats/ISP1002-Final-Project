@@ -11,6 +11,7 @@ class FavouritesViewController: UIViewController {
 
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,32 @@ class FavouritesViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.title = "Favourites"
+        tableView.reloadData()
+        updateCheckoutButton()
+    }
+    
+    func updateCheckoutButton()
+    {
+        checkoutButton.layer.cornerRadius = 5
+        
+        if Common.shared.currentOrder == nil
+        {
+            checkoutButton.isHidden = true
+        }
+        else
+        {
+            if let order = Common.shared.currentOrder
+            {
+                if order.items?.count == 0
+                {
+                    checkoutButton.isHidden = true
+                }
+                else
+                {
+                    checkoutButton.isHidden = false
+                }
+            }
+        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -38,7 +65,7 @@ class FavouritesViewController: UIViewController {
 extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return Common.shared.favItems.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,17 +82,105 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
             cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as? ItemCell
         }
         
+        let foodObject = Common.shared.favItems[indexPath.row]
         
-        if indexPath.row % 2 == 0
+        if let obj = Common.shared.currentOrder?.items?.first(where: { item in
+            item.id == foodObject.id
+        })
         {
-            cell.quantityUpdateView.isHidden = true
+            if obj.quantity == 0
+            {
+                cell.quantityUpdateView.isHidden = true
+            }
+            else
+            {
+                cell.quantityLabel.text = "\(obj.quantity ?? 1)"
+                cell.quantityUpdateView.isHidden = false
+            }
         }
         else
         {
-            cell.quantityUpdateView.isHidden = false
+            cell.quantityUpdateView.isHidden = true
         }
+        
+        cell.favImageView.image = UIImage(named: "selectedFavourites")
+        
+        cell.addButton.tag = indexPath.row
+        cell.increaseCountButton.tag = indexPath.row
+        cell.decreaseCountButton.tag = indexPath.row
+        cell.favButton.tag = indexPath.row
+        
+        cell.favButton.addTarget(self, action: #selector(favButtonAction(_:)), for: .touchUpInside)
+        cell.addButton.addTarget(self, action: #selector(addItemButtonAction(_:)), for: .touchUpInside)
+        cell.increaseCountButton.addTarget(self, action: #selector(increaseItemButtonAction(_:)), for: .touchUpInside)
+        cell.decreaseCountButton.addTarget(self, action: #selector(decreaseItemButtonAction(_:)), for: .touchUpInside)
+        
+        cell.nameLabel.text = foodObject.name
+        cell.descripLabel.text = foodObject.desc
+        cell.itemImageView.image = UIImage(named: foodObject.img)
+        
         return cell
         
+    }
+    
+    @objc func addItemButtonAction(_ sender: UIButton)
+    {
+        var orderObj = Order(orderId: 1)
+        var item = Common.shared.foodItems[sender.tag]
+        item.quantity = 1
+        orderObj.items = [item]
+        
+        if Common.shared.currentOrder == nil
+        {
+            Common.shared.currentOrder = orderObj
+        }
+        else
+        {
+            Common.shared.currentOrder?.items?.append(contentsOf: orderObj.items ?? [])
+        }
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+        checkoutButton.isHidden = false
+    }
+    
+    @objc func increaseItemButtonAction(_ sender: UIButton)
+    {
+        if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
+            item.id == Common.shared.foodItems[sender.tag].id
+        })
+        {
+            Common.shared.currentOrder?.items?[ind].quantity! += 1
+        }
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+    }
+    
+    @objc func decreaseItemButtonAction(_ sender: UIButton)
+    {
+        if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
+            item.id == Common.shared.foodItems[sender.tag].id
+        })
+        {
+            Common.shared.currentOrder?.items?[ind].quantity! -= 1
+            if Common.shared.currentOrder?.items?[ind].quantity ?? 0 == 0
+            {
+                Common.shared.currentOrder?.items?.remove(at: ind)
+                tableView.reloadData()
+            }
+            else
+            {
+                tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+            }
+        }
+        if Common.shared.currentOrder?.items?.count == 0
+        {
+            checkoutButton.isHidden = true
+            Common.shared.currentOrder = nil
+        }
+    }
+    
+    @objc func favButtonAction(_ sender: UIButton)
+    {
+        Common.shared.favItems.remove(at: sender.tag)
+        tableView.reloadData()
     }
     
 }

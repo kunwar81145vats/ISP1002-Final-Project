@@ -9,6 +9,11 @@ import UIKit
 
 class CheckoutItemCell: UITableViewCell {
 
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var increaseButton: UIButton!
+    @IBOutlet weak var decreaseButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

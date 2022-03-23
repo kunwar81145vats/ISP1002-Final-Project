@@ -20,9 +20,9 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLR-2Q-9Ur">
                         <rect key="frame" x="10" y="20" width="344" height="145"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-aC-0WP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-aC-0WP">
                                 <rect key="frame" x="10" y="10" width="90" height="90"/>
-                                <color key="backgroundColor" red="0.63137254899999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="1Qx-Ni-xOt"/>
                                     <constraint firstAttribute="height" constant="90" id="Nfs-24-SvS"/>
@@ -100,6 +100,11 @@
                                     <constraint firstAttribute="trailing" secondItem="1lg-1f-zIX" secondAttribute="trailing" id="rfT-g7-PER"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6m-uh-JGJ">
+                                <rect key="frame" x="284" y="0.0" width="60" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -110,15 +115,19 @@
                             <constraint firstItem="Kmk-aC-0WP" firstAttribute="top" secondItem="pLR-2Q-9Ur" secondAttribute="top" constant="10" id="V3W-QF-ppz"/>
                             <constraint firstAttribute="trailing" secondItem="nBw-0j-BBz" secondAttribute="trailing" constant="20" id="WK5-pa-diJ"/>
                             <constraint firstItem="dx7-fN-N6G" firstAttribute="width" secondItem="Mii-LL-79o" secondAttribute="width" id="aDS-VK-Yxb"/>
+                            <constraint firstItem="u6m-uh-JGJ" firstAttribute="leading" secondItem="fpM-9J-A31" secondAttribute="leading" constant="-10" id="dzV-Bf-uzY"/>
                             <constraint firstItem="Mii-LL-79o" firstAttribute="top" secondItem="Kmk-aC-0WP" secondAttribute="bottom" constant="10" id="fbV-Hc-rlg"/>
                             <constraint firstItem="Mii-LL-79o" firstAttribute="trailing" secondItem="Kmk-aC-0WP" secondAttribute="trailing" id="fsf-Lt-5kd"/>
                             <constraint firstItem="nBw-0j-BBz" firstAttribute="leading" secondItem="sJH-lb-JpN" secondAttribute="leading" id="hIG-5U-vMT"/>
                             <constraint firstItem="nBw-0j-BBz" firstAttribute="top" secondItem="sJH-lb-JpN" secondAttribute="bottom" constant="22" id="i4j-Cg-xHg"/>
+                            <constraint firstItem="u6m-uh-JGJ" firstAttribute="bottom" secondItem="fpM-9J-A31" secondAttribute="bottom" constant="10" id="iWV-1x-Zjf"/>
                             <constraint firstItem="dx7-fN-N6G" firstAttribute="centerY" secondItem="Mii-LL-79o" secondAttribute="centerY" id="nG6-9J-5ZS"/>
                             <constraint firstItem="sJH-lb-JpN" firstAttribute="leading" secondItem="Kmk-aC-0WP" secondAttribute="trailing" constant="20" id="o2a-Lr-yfW"/>
                             <constraint firstItem="dx7-fN-N6G" firstAttribute="centerX" secondItem="Mii-LL-79o" secondAttribute="centerX" id="qI6-tM-EWM"/>
                             <constraint firstItem="Mii-LL-79o" firstAttribute="leading" secondItem="Kmk-aC-0WP" secondAttribute="leading" id="rdy-v4-eL4"/>
                             <constraint firstItem="fpM-9J-A31" firstAttribute="leading" secondItem="sJH-lb-JpN" secondAttribute="trailing" constant="20" id="txx-mX-2XF"/>
+                            <constraint firstItem="u6m-uh-JGJ" firstAttribute="top" secondItem="pLR-2Q-9Ur" secondAttribute="top" id="uE1-U8-m1g"/>
+                            <constraint firstAttribute="trailing" secondItem="u6m-uh-JGJ" secondAttribute="trailing" id="vXs-XH-7PF"/>
                             <constraint firstAttribute="trailing" secondItem="fpM-9J-A31" secondAttribute="trailing" constant="10" id="wTt-P6-d7i"/>
                         </constraints>
                     </view>
@@ -136,8 +145,13 @@
                 <outlet property="addButton" destination="Mii-LL-79o" id="EOa-gG-WU1"/>
                 <outlet property="borderView" destination="pLR-2Q-9Ur" id="pue-xF-ktP"/>
                 <outlet property="decreaseCountButton" destination="QJH-aS-8Y8" id="yqn-jT-sAk"/>
+                <outlet property="descripLabel" destination="nBw-0j-BBz" id="wnW-sC-Jal"/>
+                <outlet property="favButton" destination="u6m-uh-JGJ" id="dZ2-vn-o40"/>
+                <outlet property="favImageView" destination="fpM-9J-A31" id="Bef-aQ-vmJ"/>
                 <outlet property="increaseCountButton" destination="1lg-1f-zIX" id="YBS-MY-jqH"/>
                 <outlet property="itemImageView" destination="Kmk-aC-0WP" id="p4O-jw-HpU"/>
+                <outlet property="nameLabel" destination="sJH-lb-JpN" id="aDc-nj-Xg4"/>
+                <outlet property="quantityLabel" destination="HCi-gd-S0Y" id="GpT-Us-aI8"/>
                 <outlet property="quantityUpdateView" destination="dx7-fN-N6G" id="Wu9-71-eqh"/>
             </connections>
             <point key="canvasLocation" x="169.56521739130437" y="111.49553571428571"/>
@@ -145,7 +159,7 @@
     </objects>
     <resources>
         <image name="add" width="42" height="42"/>
-        <image name="addToFavourite" width="51.5" height="52.5"/>
+        <image name="addToFavourite" width="24" height="24"/>
         <image name="minus" width="42" height="42"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

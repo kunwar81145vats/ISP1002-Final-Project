@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Order: Equatable
+struct Order: Equatable, Codable
 {
     let orderId: Int!
     var items: [FoodItem]?
