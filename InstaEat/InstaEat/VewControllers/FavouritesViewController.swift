@@ -25,6 +25,7 @@ class FavouritesViewController: UIViewController {
         self.title = "Favourites"
         tableView.reloadData()
         updateCheckoutButton()
+        tableView.isHidden = Common.shared.favItems.count == 0 ? true : false
     }
     
     func updateCheckoutButton()

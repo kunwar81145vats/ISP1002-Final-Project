@@ -9,6 +9,7 @@ import UIKit
 
 class CheckoutViewController: UIViewController {
 
+    @IBOutlet weak var orderButtonHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalCountLabel: UILabel!
     override func viewDidLoad() {
@@ -85,6 +86,8 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate
         if Common.shared.currentOrder?.items?.count == 0
         {
             Common.shared.currentOrder = nil
+            tableView.isHidden = true
+            orderButtonHeightConstraint.constant = 0
         }
         updateCountLabel()
     }

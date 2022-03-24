@@ -12,9 +12,18 @@ class Common: NSObject {
     static let shared = Common()
     var foodItems: [FoodItem] = []
     var currentOrder: Order?
-    var favItems: [FoodItem] = []
+    var favItems: [FoodItem] = [] {
+        didSet {
+            saveFavItems()
+        }
+    }
     
-    func parseFromJsonFIle() {
+    func loadDataItems()
+    {
+        parseFromJsonFIle()
+        fetchFavItems()
+    }
+    private func parseFromJsonFIle() {
         
         let decoder = JSONDecoder()
         
@@ -32,6 +41,18 @@ class Common: NSObject {
         }
     }
     
+    private func fetchFavItems()
+    {
+        if let data = UserDefaults.standard.data(forKey: KfavouriteItems) {
+            do {
+                let decoder = JSONDecoder()
+                favItems = try decoder.decode([FoodItem].self, from: data)
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
+        }
+    }
+    
     func readLocalJSONFile(forName name: String) -> Data? {
         do {
             if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
@@ -43,5 +64,17 @@ class Common: NSObject {
             print("error: \(error)")
         }
         return nil
+    }
+    
+    func saveFavItems()
+    {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(favItems)
+
+            UserDefaults.standard.set(data, forKey: KfavouriteItems)
+        } catch {
+            print("Unable to Encode Note (\(error))")
+        }
     }
 }
