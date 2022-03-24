@@ -17,14 +17,38 @@ class OrdersViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableView.automaticDimension
-        checkoutButton.layer.cornerRadius = 5
     }
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.title = "Orders"
+        self.tableView.reloadData()
+        updateCheckoutButton()
+    }
+    
+    func updateCheckoutButton()
+    {
+        checkoutButton.layer.cornerRadius = 5
+        
+        if Common.shared.currentOrder == nil
+        {
+            checkoutButton.isHidden = true
+        }
+        else
+        {
+            if let order = Common.shared.currentOrder
+            {
+                if order.items?.count == 0
+                {
+                    checkoutButton.isHidden = true
+                }
+                else
+                {
+                    checkoutButton.isHidden = false
+                }
+            }
+        }
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -40,7 +64,7 @@ class OrdersViewController: UIViewController {
 extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return Common.shared.pastOrders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,14 +77,18 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
             cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell") as? OrderCell
         }
         
-        if indexPath.row % 2 == 0
+        let order = Common.shared.pastOrders[indexPath.row]
+        
+        cell.titleLabel.text = "Order #\(order.orderId ?? 1)"
+        
+        var itemsText: String = ""
+        for item in order.items ?? []
         {
-            cell.itemsLabel.text = "Item 1\nItem 2\nItem 3\nItem 4"
+            itemsText += "\(item.quantity ?? 1)  \(item.name ?? "")\n\n"
         }
-        else
-        {
-            cell.itemsLabel.text = "Item 1\nItem 2\nItem 3\nItem 4\nItem 5\nItem 6\nItem 7"
-        }
+        
+        itemsText.removeLast(2)
+        cell.itemsLabel.text = itemsText
         
         return cell
         

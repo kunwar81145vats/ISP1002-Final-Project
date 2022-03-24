@@ -320,6 +320,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No orders placed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-fP-GS0">
+                                <rect key="frame" x="112" y="436" width="190" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-MB-9ec">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -351,8 +357,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tzU-kb-Tnh" firstAttribute="leading" secondItem="OH1-Al-Sdb" secondAttribute="leading" constant="20" id="1Co-Ip-5hI"/>
+                            <constraint firstItem="ptX-fP-GS0" firstAttribute="centerY" secondItem="OH1-Al-Sdb" secondAttribute="centerY" id="F5s-wM-o5A"/>
                             <constraint firstItem="OH1-Al-Sdb" firstAttribute="trailing" secondItem="tzU-kb-Tnh" secondAttribute="trailing" constant="20" id="M0I-qA-3Om"/>
                             <constraint firstItem="OH1-Al-Sdb" firstAttribute="bottom" secondItem="2Zm-MB-9ec" secondAttribute="bottom" id="Omq-1H-beK"/>
+                            <constraint firstItem="ptX-fP-GS0" firstAttribute="centerX" secondItem="OH1-Al-Sdb" secondAttribute="centerX" id="bS5-YB-7BB"/>
                             <constraint firstItem="2Zm-MB-9ec" firstAttribute="top" secondItem="OH1-Al-Sdb" secondAttribute="top" id="bWg-Kb-lCv"/>
                             <constraint firstItem="2Zm-MB-9ec" firstAttribute="leading" secondItem="OH1-Al-Sdb" secondAttribute="leading" id="nRe-iT-eU5"/>
                             <constraint firstItem="OH1-Al-Sdb" firstAttribute="bottom" secondItem="tzU-kb-Tnh" secondAttribute="bottom" constant="20" id="v5n-kg-Om0"/>
@@ -507,7 +515,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SSS-nf-pO4"/>
+        <segue reference="weV-6t-F0P"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="42" height="42"/>

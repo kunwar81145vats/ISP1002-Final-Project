@@ -20,6 +20,10 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if Common.shared.foodItems.count == 0
+        {
+            Common.shared.loadDataItems()
+        }
         self.title = "Home"
         updateCheckoutButton()
         tableView.reloadData()
@@ -131,7 +135,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
     
     @objc func addItemButtonAction(_ sender: UIButton)
     {
-        var orderObj = Order(orderId: 1)
+        let orderId: Int = UserDefaults.standard.value(forKey: KcurrentOrderId) as? Int ?? 1
+        var orderObj = Order(orderId: orderId)
         var item = Common.shared.foodItems[sender.tag]
         item.quantity = 1
         orderObj.items = [item]
@@ -144,6 +149,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         {
             Common.shared.currentOrder?.items?.append(contentsOf: orderObj.items ?? [])
         }
+        Common.shared.saveCurrentOrder()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
         checkoutButton.isHidden = false
     }
@@ -156,6 +162,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         {
             Common.shared.currentOrder?.items?[ind].quantity! += 1
         }
+        Common.shared.saveCurrentOrder()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
@@ -181,6 +188,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
             checkoutButton.isHidden = true
             Common.shared.currentOrder = nil
         }
+        Common.shared.saveCurrentOrder()
     }
     
     @objc func favButtonAction(_ sender: UIButton)
@@ -198,6 +206,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         
         print(Common.shared.favItems)
         tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .automatic)
+        Common.shared.saveFavItems()
     }
     
 }

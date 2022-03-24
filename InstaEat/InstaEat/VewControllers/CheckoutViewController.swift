@@ -32,6 +32,7 @@ class CheckoutViewController: UIViewController {
     
     @IBAction func placeOrderButtonAction(_ sender: Any) {
         
+        Common.shared.savePastOrder()
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)

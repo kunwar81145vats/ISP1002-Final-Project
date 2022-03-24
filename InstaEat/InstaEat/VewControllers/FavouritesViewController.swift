@@ -134,11 +134,13 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         if Common.shared.currentOrder == nil
         {
             Common.shared.currentOrder = orderObj
+            Common.shared.saveCurrentOrder()
         }
         else
         {
             Common.shared.currentOrder?.items?.append(contentsOf: orderObj.items ?? [])
         }
+        Common.shared.saveCurrentOrder()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
         checkoutButton.isHidden = false
     }
@@ -151,6 +153,7 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         {
             Common.shared.currentOrder?.items?[ind].quantity! += 1
         }
+        Common.shared.saveCurrentOrder()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
@@ -176,12 +179,14 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
             checkoutButton.isHidden = true
             Common.shared.currentOrder = nil
         }
+        Common.shared.saveCurrentOrder()
     }
     
     @objc func favButtonAction(_ sender: UIButton)
     {
         Common.shared.favItems.remove(at: sender.tag)
         tableView.reloadData()
+        Common.shared.saveFavItems()
     }
     
 }
