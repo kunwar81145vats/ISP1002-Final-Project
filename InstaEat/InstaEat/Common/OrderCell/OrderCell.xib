@@ -32,6 +32,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-PQ-nCV">
+                                <rect key="frame" x="347" y="0.0" width="40" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ZJq-EH-9FN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="delete"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="cellBG"/>
                         <constraints>
@@ -39,7 +47,9 @@
                             <constraint firstItem="Fnj-sQ-gvW" firstAttribute="leading" secondItem="EMb-ma-oD2" secondAttribute="leading" id="SAR-6M-XpM"/>
                             <constraint firstItem="EMb-ma-oD2" firstAttribute="leading" secondItem="aGW-eI-ddi" secondAttribute="leading" constant="10" id="XNn-1c-6gf"/>
                             <constraint firstAttribute="bottom" secondItem="Fnj-sQ-gvW" secondAttribute="bottom" constant="10" id="ew1-gU-5hZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Xst-PQ-nCV" secondAttribute="trailing" id="gkl-SM-xlZ"/>
                             <constraint firstItem="EMb-ma-oD2" firstAttribute="top" secondItem="aGW-eI-ddi" secondAttribute="top" constant="10" id="gkp-Dh-WRa"/>
+                            <constraint firstItem="Xst-PQ-nCV" firstAttribute="top" secondItem="aGW-eI-ddi" secondAttribute="top" id="lWY-Kx-XgK"/>
                             <constraint firstItem="Fnj-sQ-gvW" firstAttribute="top" secondItem="EMb-ma-oD2" secondAttribute="bottom" constant="10" id="qyB-zg-k70"/>
                             <constraint firstAttribute="trailing" secondItem="EMb-ma-oD2" secondAttribute="trailing" constant="10" id="xT2-j3-GiD"/>
                         </constraints>
@@ -56,6 +66,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="borderView" destination="aGW-eI-ddi" id="dcC-Te-WIO"/>
+                <outlet property="deleteButton" destination="Xst-PQ-nCV" id="NVw-Zn-Kbf"/>
                 <outlet property="itemsLabel" destination="Fnj-sQ-gvW" id="Eoj-Nc-Xgh"/>
                 <outlet property="titleLabel" destination="EMb-ma-oD2" id="xxE-8a-CVB"/>
             </connections>
@@ -63,6 +74,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="delete" width="32" height="32"/>
         <namedColor name="cellBG">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

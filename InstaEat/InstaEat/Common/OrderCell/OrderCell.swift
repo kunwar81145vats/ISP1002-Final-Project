@@ -11,6 +11,7 @@ class OrderCell: UITableViewCell {
 
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var itemsLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {

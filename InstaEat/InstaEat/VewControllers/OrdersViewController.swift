@@ -12,7 +12,6 @@ class OrdersViewController: UIViewController {
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noDataLabel: UILabel!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +106,25 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
         itemsText.removeLast(2)
         cell.itemsLabel.text = itemsText
         
+        cell.deleteButton.tag = indexPath.row
+        cell.deleteButton.addTarget(self, action: #selector(deleteButtonAction(_:)), for: .touchUpInside)
+        
         return cell
         
     }
+    
+    //Delete order button action
+    @objc func deleteButtonAction(_ sender: UIButton)
+    {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to delete this order?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Yes", style: .default, handler: { action in
+            
+            Common.shared.pastOrders.remove(at: sender.tag)
+            Common.shared.updatePastOrders()
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+

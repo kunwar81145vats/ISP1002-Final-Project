@@ -164,6 +164,17 @@ class Common: NSObject {
         userDefaultStandard.set(newOrderId, forKey: KcurrentOrderId)
         userDefaultStandard.removeObject(forKey: KcurrentOrder)
     }
+    
+    //Method used when a past order is deleted.
+    func updatePastOrders()
+    {
+        do {
+            let data = try PropertyListEncoder().encode(pastOrders)
+            userDefaultStandard.set(data, forKey: KpastOrders)
+        } catch {
+            printDebug("Unable to Encode past order (\(error))")
+        }
+    }
 }
 
 
