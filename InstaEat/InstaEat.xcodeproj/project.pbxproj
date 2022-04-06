@@ -15,7 +15,6 @@
 		950BF8D627DED48F00AFAA3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D527DED48F00AFAA3A /* Constants.swift */; };
 		950BF8D827DED4DA00AFAA3A /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8D727DED4DA00AFAA3A /* SuccessViewController.swift */; };
 		950BF8E227DED9AA00AFAA3A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8E027DED9AA00AFAA3A /* ItemCell.swift */; };
-		950BF8E327DED9AA00AFAA3A /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8E127DED9AA00AFAA3A /* ItemCell.xib */; };
 		950BF8E727DEDD6300AFAA3A /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8E527DEDD6300AFAA3A /* OrderCell.swift */; };
 		950BF8E827DEDD6300AFAA3A /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950BF8E627DEDD6300AFAA3A /* OrderCell.xib */; };
 		950BF8EC27DF5B3A00AFAA3A /* CheckoutItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950BF8EB27DF5B3A00AFAA3A /* CheckoutItemCell.swift */; };
@@ -37,7 +36,9 @@
 		950BF91127E00AC100AFAA3A /* taco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90127E00AC100AFAA3A /* taco.jpg */; };
 		950BF91227E00AC100AFAA3A /* curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90227E00AC100AFAA3A /* curry.jpg */; };
 		950BF91327E00AC100AFAA3A /* pie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950BF90327E00AC100AFAA3A /* pie.jpg */; };
-		950BF91727E012BB00AFAA3A /* FoodItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 950BF91627E012BB00AFAA3A /* FoodItems.json */; };
+		95615EAB27FDA40900007AF4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95615EAD27FDA40900007AF4 /* Localizable.strings */; };
+		95615EAF27FDAC0A00007AF4 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95615EB127FDAC0A00007AF4 /* ItemCell.xib */; };
+		95615EB427FDAD1300007AF4 /* FoodItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 95615EB627FDAD1300007AF4 /* FoodItems.json */; };
 		95851D6427DECF8A006CBA06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6327DECF8A006CBA06 /* AppDelegate.swift */; };
 		95851D6627DECF8A006CBA06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95851D6527DECF8A006CBA06 /* SceneDelegate.swift */; };
 		95851D6B27DECF8A006CBA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95851D6927DECF8A006CBA06 /* Main.storyboard */; };
@@ -55,7 +56,6 @@
 		950BF8D527DED48F00AFAA3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		950BF8D727DED4DA00AFAA3A /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		950BF8E027DED9AA00AFAA3A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		950BF8E127DED9AA00AFAA3A /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		950BF8E527DEDD6300AFAA3A /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		950BF8E627DEDD6300AFAA3A /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		950BF8EB27DF5B3A00AFAA3A /* CheckoutItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemCell.swift; sourceTree = "<group>"; };
@@ -77,7 +77,14 @@
 		950BF90127E00AC100AFAA3A /* taco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taco.jpg; sourceTree = "<group>"; };
 		950BF90227E00AC100AFAA3A /* curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curry.jpg; sourceTree = "<group>"; };
 		950BF90327E00AC100AFAA3A /* pie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pie.jpg; sourceTree = "<group>"; };
-		950BF91627E012BB00AFAA3A /* FoodItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodItems.json; sourceTree = "<group>"; };
+		95615EA727FDA2EE00007AF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		95615EA827FDA2EE00007AF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		95615EAC27FDA40900007AF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95615EAE27FDA40C00007AF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95615EB027FDAC0A00007AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ItemCell.xib; sourceTree = "<group>"; };
+		95615EB327FDAC0C00007AF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ItemCell.strings; sourceTree = "<group>"; };
+		95615EB527FDAD1300007AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/FoodItems.json; sourceTree = "<group>"; };
+		95615EB727FDAD1600007AF4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/FoodItems.json; sourceTree = "<group>"; };
 		95851D6027DECF8A006CBA06 /* InstaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95851D6327DECF8A006CBA06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95851D6527DECF8A006CBA06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 				950BF8D927DED5E600AFAA3A /* Item Cell */,
 				950BF8D327DED48500AFAA3A /* Common.swift */,
 				950BF8D527DED48F00AFAA3A /* Constants.swift */,
+				95615EAD27FDA40900007AF4 /* Localizable.strings */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -146,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				950BF8E027DED9AA00AFAA3A /* ItemCell.swift */,
-				950BF8E127DED9AA00AFAA3A /* ItemCell.xib */,
+				95615EB127FDAC0A00007AF4 /* ItemCell.xib */,
 			);
 			path = "Item Cell";
 			sourceTree = "<group>";
@@ -180,7 +188,7 @@
 		950BF8F327E009D200AFAA3A /* Food Data */ = {
 			isa = PBXGroup;
 			children = (
-				950BF91627E012BB00AFAA3A /* FoodItems.json */,
+				95615EB627FDAD1300007AF4 /* FoodItems.json */,
 				950BF8F827E00AC100AFAA3A /* barbecue.jpg */,
 				950BF8FF27E00AC100AFAA3A /* burger.jpg */,
 				950BF8F627E00AC100AFAA3A /* coke.jpg */,
@@ -274,6 +282,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 95851D5727DECF8A006CBA06;
 			productRefGroup = 95851D6127DECF8A006CBA06 /* Products */;
@@ -292,6 +301,7 @@
 			files = (
 				950BF8E827DEDD6300AFAA3A /* OrderCell.xib in Resources */,
 				950BF90627E00AC100AFAA3A /* coke.jpg in Resources */,
+				95615EAB27FDA40900007AF4 /* Localizable.strings in Resources */,
 				950BF90927E00AC100AFAA3A /* yogurt.jpg in Resources */,
 				950BF90527E00AC100AFAA3A /* fries.jpg in Resources */,
 				950BF90F27E00AC100AFAA3A /* burger.jpg in Resources */,
@@ -300,13 +310,13 @@
 				950BF91127E00AC100AFAA3A /* taco.jpg in Resources */,
 				950BF90C27E00AC100AFAA3A /* hotdog.jpg in Resources */,
 				95851D7327DECF8A006CBA06 /* LaunchScreen.storyboard in Resources */,
-				950BF8E327DED9AA00AFAA3A /* ItemCell.xib in Resources */,
+				95615EAF27FDAC0A00007AF4 /* ItemCell.xib in Resources */,
 				950BF90427E00AC100AFAA3A /* margPizza.jpeg in Resources */,
 				950BF91327E00AC100AFAA3A /* pie.jpg in Resources */,
 				950BF90B27E00AC100AFAA3A /* sandwich.jpg in Resources */,
 				950BF91227E00AC100AFAA3A /* curry.jpg in Resources */,
 				950BF91027E00AC100AFAA3A /* pepPizza.jpg in Resources */,
-				950BF91727E012BB00AFAA3A /* FoodItems.json in Resources */,
+				95615EB427FDAD1300007AF4 /* FoodItems.json in Resources */,
 				950BF90E27E00AC100AFAA3A /* popcorn.jpg in Resources */,
 				95851D7027DECF8A006CBA06 /* Assets.xcassets in Resources */,
 				950BF90827E00AC100AFAA3A /* barbecue.jpg in Resources */,
@@ -343,10 +353,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		95615EAD27FDA40900007AF4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95615EAC27FDA40900007AF4 /* en */,
+				95615EAE27FDA40C00007AF4 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		95615EB127FDAC0A00007AF4 /* ItemCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95615EB027FDAC0A00007AF4 /* Base */,
+				95615EB327FDAC0C00007AF4 /* fr */,
+			);
+			name = ItemCell.xib;
+			sourceTree = "<group>";
+		};
+		95615EB627FDAD1300007AF4 /* FoodItems.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95615EB527FDAD1300007AF4 /* Base */,
+				95615EB727FDAD1600007AF4 /* fr */,
+			);
+			name = FoodItems.json;
+			sourceTree = "<group>";
+		};
 		95851D6927DECF8A006CBA06 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				95851D6A27DECF8A006CBA06 /* Base */,
+				95615EA727FDA2EE00007AF4 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -355,6 +393,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				95851D7227DECF8A006CBA06 /* Base */,
+				95615EA827FDA2EE00007AF4 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -366,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -427,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

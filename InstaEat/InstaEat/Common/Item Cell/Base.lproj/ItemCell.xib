@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -106,7 +107,7 @@
                                 <buttonConfiguration key="configuration" style="plain"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="cellBG"/>
                         <constraints>
                             <constraint firstItem="fpM-9J-A31" firstAttribute="top" secondItem="sJH-lb-JpN" secondAttribute="top" id="AVA-FP-gRK"/>
                             <constraint firstItem="sJH-lb-JpN" firstAttribute="top" secondItem="Kmk-aC-0WP" secondAttribute="top" id="EnQ-cm-P5G"/>
@@ -132,7 +133,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" name="tableBG"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="pLR-2Q-9Ur" secondAttribute="trailing" constant="10" id="f5g-CZ-L6u"/>
                     <constraint firstItem="pLR-2Q-9Ur" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="gBo-Bx-0nM"/>
@@ -161,6 +162,12 @@
         <image name="add" width="42" height="42"/>
         <image name="addToFavourite" width="24" height="24"/>
         <image name="minus" width="42" height="42"/>
+        <namedColor name="cellBG">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tableBG">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

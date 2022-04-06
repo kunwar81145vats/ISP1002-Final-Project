@@ -11,6 +11,9 @@ class OrdersViewController: UIViewController {
 
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noDataLabel: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,11 +25,23 @@ class OrdersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Orders"
+        self.title = NSLocalizedString("Orders", comment: "")
         self.tableView.reloadData()
         updateCheckoutButton()
+        
+        if Common.shared.pastOrders.count == 0
+        {
+            tableView.isHidden = true
+            noDataLabel.isHidden = false
+        }
+        else
+        {
+            tableView.isHidden = false
+            noDataLabel.isHidden = true
+        }
     }
     
+    //Update checkout button
     func updateCheckoutButton()
     {
         checkoutButton.layer.cornerRadius = 5
@@ -56,11 +71,12 @@ class OrdersViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Back", style: .plain, target: nil, action: nil)
+            title: NSLocalizedString("Back", comment: ""), style: .plain, target: nil, action: nil)
     }
 
 }
 
+//MARK: - UITableview Datasouce and Delegate
 extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,12 +95,13 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
         
         let order = Common.shared.pastOrders[indexPath.row]
         
-        cell.titleLabel.text = "Order #\(order.orderId ?? 1)"
+        cell.titleLabel.text = NSLocalizedString("Order", comment: "") + " #" + "\(order.orderId ?? 1)"
         
         var itemsText: String = ""
         for item in order.items ?? []
         {
-            itemsText += "\(item.quantity ?? 1)  \(item.name ?? "")\n\n"
+            let name = item.name
+            itemsText += "\(item.quantity ?? 1)  \(name ?? "")\n\n"
         }
         
         itemsText.removeLast(2)
@@ -93,6 +110,4 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate
         return cell
         
     }
-    
-    
 }

@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "name":"pizza margherita",
+        "description":"Préparé dans un four à bois pour vous donner la meilleure pizza possible disponible.",
+        "img": "margPizza.jpeg"
+    },
+    {
+        "id": 2,
+        "name":"Pizza au pepperoni",
+        "description":"Préparé dans un four à bois pour vous donner la meilleure pizza possible disponible.",
+        "img": "pepPizza.jpg"
+    },
+    {
+        "id": 3,
+        "name":"hamburger au fromage",
+        "description":"Un cheeseburger est un hamburger garni de fromage.",
+        "img": "burger.jpg"
+    },
+    {
+        "id": 4,
+        "name":"frites",
+        "description":"Les frites, les frites, les frites, les pommes de terre frites ou simplement les frites sont des pommes de terre frites coupées en batonnet ou en allumette.",
+        "img": "fries.jpg"
+    },
+    {
+        "id": 5,
+        "name":"du Coca",
+        "description":"Coca-Cola, ou Coke, est une boisson gazeuse fabriquée par The Coca-Cola Company.",
+        "img": "coke.jpg"
+    },
+    {
+        "id": 7,
+        "name":"Sandwich",
+        "description":"Un sandwich est un aliment généralement composé de légumes, de fromage en tranches ou de viande, placé sur ou entre des tranches de pain.",
+        "img": "sandwich.jpg"
+    }, {
+        "id": 8,
+        "name":"Poulet au curry",
+        "description":"Le curry de poulet est un plat originaire du sous-continent indien.",
+        "img": "curry.jpg"
+    },
+    {
+        "id": 9,
+        "name":"Ailes de poulet",
+        "description":"Les ailes de poulet sont de la viande blanche, même si elles sont plus juteuses et ont une saveur de volaille plus concentrée, comme la viande brune.",
+        "img": "wings.jpg"
+    },
+    {
+        "id": 10,
+        "name":"Yaourt",
+        "description":"Le yaourt également orthographié yaourt, yaourt ou yaourt, est un aliment produit par fermentation bactérienne du lait.",
+        "img": "yogurt.jpg"
+    },
+    {
+        "id": 11,
+        "name":"Tarte aux pommes",
+        "description":"Une tarte aux pommes est une tarte dont le principal ingrédient de garniture est la pomme.",
+        "img": "pie.jpg"
+    },
+    {
+        "id": 12,
+        "name":"Hot-dog",
+        "description":"Un hot-dog est un aliment composé d'une saucisse grillée ou cuite à la vapeur servie dans la fente d'un petit pain partiellement tranché.",
+        "img": "hotdog.jpg"
+    },
+    {
+        "id": 13,
+        "name":"Pop corn",
+        "description":"Le pop-corn est une variété de grains de maïs qui se dilate et gonfle lorsqu'il est chauffé. les mêmes noms font également référence aux denrées alimentaires produites par l'expansion.",
+        "img": "popcorn.jpg"
+    },
+    {
+        "id": 14,
+        "name":"Nuggets de poulet",
+        "description":"Une pépite de poulet est un produit alimentaire composé d'un petit morceau de viande de poulet désossé qui est pané ou pané, puis frit ou cuit au four.",
+        "img": "nuggets.jpg"
+    },
+    {
+        "id": 15,
+        "name":"Poulet barbecue",
+        "description":"Le poulet barbecue se compose de morceaux de poulet ou de poulets entiers cuits au barbecue, grillés ou fumés.",
+        "img": "barbecue.jpg"
+    },
+    {
+        "id": 16,
+        "name":"Tacos",
+        "description":"Un taco est un plat mexicain traditionnel composé de petites tortillas de maïs ou de blé de la taille d'une main garnies d'une garniture.",
+        "img": "taco.jpg"
+    }
+]

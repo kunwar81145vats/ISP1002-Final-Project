@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="cellBG"/>
                         <constraints>
                             <constraint firstItem="Fnj-sQ-gvW" firstAttribute="trailing" secondItem="EMb-ma-oD2" secondAttribute="trailing" id="Ae9-Du-fjt"/>
                             <constraint firstItem="Fnj-sQ-gvW" firstAttribute="leading" secondItem="EMb-ma-oD2" secondAttribute="leading" id="SAR-6M-XpM"/>
@@ -45,7 +45,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" name="tableBG"/>
                 <constraints>
                     <constraint firstItem="aGW-eI-ddi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="JR8-xL-9G8"/>
                     <constraint firstAttribute="trailing" secondItem="aGW-eI-ddi" secondAttribute="trailing" constant="10" id="VJF-YR-hCe"/>
@@ -63,8 +63,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="cellBG">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tableBG">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

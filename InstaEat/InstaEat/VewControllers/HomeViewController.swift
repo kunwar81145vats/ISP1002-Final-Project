@@ -24,11 +24,12 @@ class HomeViewController: UIViewController {
         {
             Common.shared.loadDataItems()
         }
-        self.title = "Home"
+        self.title = NSLocalizedString("Home", comment: "")
         updateCheckoutButton()
         tableView.reloadData()
     }
     
+    //Update checkout button on item quantity change
     func updateCheckoutButton()
     {
         checkoutButton.layer.cornerRadius = 5
@@ -63,6 +64,7 @@ class HomeViewController: UIViewController {
 
 }
 
+//MARK: - UITableview Datasouce and Delegate
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,6 +135,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         
     }
     
+    //Add Item button action
     @objc func addItemButtonAction(_ sender: UIButton)
     {
         let orderId: Int = UserDefaults.standard.value(forKey: KcurrentOrderId) as? Int ?? 1
@@ -154,6 +157,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         checkoutButton.isHidden = false
     }
     
+    //+ button action
     @objc func increaseItemButtonAction(_ sender: UIButton)
     {
         if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
@@ -166,6 +170,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
+    //- button action
     @objc func decreaseItemButtonAction(_ sender: UIButton)
     {
         if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
@@ -188,9 +193,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
             checkoutButton.isHidden = true
             Common.shared.currentOrder = nil
         }
+        
         Common.shared.saveCurrentOrder()
     }
     
+    //Favourite button action
     @objc func favButtonAction(_ sender: UIButton)
     {
         if let ind =  Common.shared.favItems.firstIndex(where: { obj in
@@ -204,7 +211,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
             Common.shared.favItems.append(Common.shared.foodItems[sender.tag])
         }
         
-        print(Common.shared.favItems)
         tableView.reloadRows(at: [IndexPath.init(row: sender.tag, section: 0)], with: .automatic)
         Common.shared.saveFavItems()
     }

@@ -22,12 +22,13 @@ class FavouritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Favourites"
+        self.title = NSLocalizedString("Favourites", comment: "")
         tableView.reloadData()
         updateCheckoutButton()
         tableView.isHidden = Common.shared.favItems.count == 0 ? true : false
     }
     
+    //Update checkout button
     func updateCheckoutButton()
     {
         checkoutButton.layer.cornerRadius = 5
@@ -57,12 +58,12 @@ class FavouritesViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Back", style: .plain, target: nil, action: nil)
+            title: NSLocalizedString("Back", comment: ""), style: .plain, target: nil, action: nil)
     }
 
 }
 
-
+//MARK: - UITableview Datasouce and Delegate
 extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,6 +125,7 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         
     }
     
+    //Add item button action
     @objc func addItemButtonAction(_ sender: UIButton)
     {
         var orderObj = Order(orderId: 1)
@@ -145,6 +147,7 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         checkoutButton.isHidden = false
     }
     
+    //+ button action
     @objc func increaseItemButtonAction(_ sender: UIButton)
     {
         if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
@@ -157,6 +160,7 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
+    //- button action
     @objc func decreaseItemButtonAction(_ sender: UIButton)
     {
         if let ind = Common.shared.currentOrder?.items?.firstIndex(where: { item in
@@ -182,6 +186,7 @@ extension FavouritesViewController: UITableViewDataSource, UITableViewDelegate
         Common.shared.saveCurrentOrder()
     }
     
+    //Favourite button action
     @objc func favButtonAction(_ sender: UIButton)
     {
         Common.shared.favItems.remove(at: sender.tag)

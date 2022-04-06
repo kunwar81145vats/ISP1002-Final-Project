@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  InstaEat
+
+  Created by Kunwar Vats on 06/04/22.
+  
+*/
+
+"Home" = "Home";
+
+"Orders" = "Orders";
+
+"Back" = "Back";
+
+"Order" = "Order";
+
+"Favourites" = "Favourites";

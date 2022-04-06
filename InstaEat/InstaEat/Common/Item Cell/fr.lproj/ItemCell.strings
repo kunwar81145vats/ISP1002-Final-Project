@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1lg-1f-zIX"; */
+"1lg-1f-zIX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "HCi-gd-S0Y"; */
+"HCi-gd-S0Y.text" = "2";
+
+/* Class = "UIButton"; configuration.title = "Add"; ObjectID = "Mii-LL-79o"; */
+"Mii-LL-79o.configuration.title" = "Ajouter";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Mii-LL-79o"; */
+"Mii-LL-79o.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QJH-aS-8Y8"; */
+"QJH-aS-8Y8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Pizza with 4 types of cheese, lots of vegetables, and lots of sauces."; ObjectID = "nBw-0j-BBz"; */
+"nBw-0j-BBz.text" = "Pizza with 4 types of cheese, lots of vegetables, and lots of sauces.";
+
+/* Class = "UILabel"; text = "Farmhouse pizza"; ObjectID = "sJH-lb-JpN"; */
+"sJH-lb-JpN.text" = "Farmhouse pizza";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "u6m-uh-JGJ"; */
+"u6m-uh-JGJ.normalTitle" = "Button";

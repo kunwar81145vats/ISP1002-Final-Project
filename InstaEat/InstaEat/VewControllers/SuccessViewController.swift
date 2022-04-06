@@ -16,6 +16,7 @@ class SuccessViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    //View orders button action
     @IBAction func viewOrdersButtonAction(_ sender: Any) {
         
         if let tabController = self.presentingViewController as? UITabBarController
@@ -29,6 +30,7 @@ class SuccessViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //Cross button action
     @IBAction func crossButtonAction(_ sender: Any) {
         
         if let navController = (self.presentingViewController as? UITabBarController)?.selectedViewController as? UINavigationController

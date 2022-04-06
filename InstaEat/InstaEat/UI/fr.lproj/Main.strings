@@ -1,0 +1,72 @@
+
+/* Class = "UIButton"; configuration.title = "Place Order"; ObjectID = "1WK-jI-iup"; */
+"1WK-jI-iup.configuration.title" = "Passer la commande";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1WK-jI-iup"; */
+"1WK-jI-iup.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Total Items"; ObjectID = "51R-r7-j6g"; */
+"51R-r7-j6g.text" = "Articles au total";
+
+/* Class = "UIButton"; configuration.title = "View Orders"; ObjectID = "FkH-Bx-xgN"; */
+"FkH-Bx-xgN.configuration.title" = "Afficher les commandes";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FkH-Bx-xgN"; */
+"FkH-Bx-xgN.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Please add items to place an order"; ObjectID = "Goy-RZ-lkN"; */
+"Goy-RZ-lkN.text" = "Veuillez ajouter des articles pour passer une commande";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IYQ-cR-rCh"; */
+"IYQ-cR-rCh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "K57-pW-ywo"; */
+"K57-pW-ywo.text" = "2";
+
+/* Class = "UILabel"; text = "Your order is placed successfully."; ObjectID = "M7D-QP-aya"; */
+"M7D-QP-aya.text" = "Votre commande est passée avec succès.";
+
+/* Class = "UIButton"; configuration.title = "CHECKOUT"; ObjectID = "Mos-86-HF4"; */
+"Mos-86-HF4.configuration.title" = "VÉRIFIER";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Mos-86-HF4"; */
+"Mos-86-HF4.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UJa-3D-Kls"; */
+"UJa-3D-Kls.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Orders"; ObjectID = "a6D-Z2-C11"; */
+"a6D-Z2-C11.title" = "Ordres";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bKm-g0-dD2"; */
+"bKm-g0-dD2.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "CHECKOUT"; ObjectID = "dWD-Er-NVY"; */
+"dWD-Er-NVY.configuration.title" = "VÉRIFIER";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dWD-Er-NVY"; */
+"dWD-Er-NVY.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Favourites"; ObjectID = "iB8-y7-ZX6"; */
+"iB8-y7-ZX6.title" = "Favoris";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "kUN-AB-blH"; */
+"kUN-AB-blH.text" = "5";
+
+/* Class = "UILabel"; text = "Item a"; ObjectID = "p1K-vJ-nOE"; */
+"p1K-vJ-nOE.text" = "Item a";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "pU5-uX-a6X"; */
+"pU5-uX-a6X.title" = "Maison";
+
+/* Class = "UILabel"; text = "No orders placed"; ObjectID = "ptX-fP-GS0"; */
+"ptX-fP-GS0.text" = "Aucune commande passée";
+
+/* Class = "UIButton"; configuration.title = "CHECKOUT"; ObjectID = "tzU-kb-Tnh"; */
+"tzU-kb-Tnh.configuration.title" = "VÉRIFIER";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tzU-kb-Tnh"; */
+"tzU-kb-Tnh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "No items marked as favourite"; ObjectID = "uad-Rz-PvD"; */
+"uad-Rz-PvD.text" = "Aucun élément marqué comme favori";

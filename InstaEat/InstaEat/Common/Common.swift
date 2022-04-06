@@ -18,6 +18,7 @@ class Common: NSObject {
     var favItems: [FoodItem] = []
     var pastOrders: [Order] = []
         
+    //Method to load items at app start
     func loadDataItems()
     {
         parseFromJsonFIle()
@@ -26,6 +27,7 @@ class Common: NSObject {
         fetchCurrentOrder()
     }
     
+    //Method to parse Json File to Model
     private func parseFromJsonFIle() {
         
         let decoder = JSONDecoder()
@@ -34,15 +36,20 @@ class Common: NSObject {
         if let data = jsonData {
                
             do{
-                let jsonItems = try decoder.decode([FoodItem].self, from: data)
-                foodItems = jsonItems
+                if let strVal = String(data: data, encoding: .macOSRoman)
+                {
+                    let utf8Data = Data(strVal.utf8)
+                    let jsonItems = try decoder.decode([FoodItem].self, from: utf8Data)
+                    foodItems = jsonItems
+                }
             }
             catch {
-                print(error)
+                printDebug(error)
             }
         }
     }
     
+    //Method to read local JSON file
     private func readLocalJSONFile(forName name: String) -> Data? {
         do {
             if let filePath = Bundle.main.path(forResource: name, ofType: KfileType) {
@@ -51,43 +58,47 @@ class Common: NSObject {
                 return data
             }
         } catch {
-            print("error: \(error)")
+            printDebug("error: \(error)")
         }
         return nil
     }
     
+    //Method to fetch favourite items
     private func fetchFavItems()
     {
         if let data = userDefaultStandard.data(forKey: KfavouriteItems) {
             do {
                 favItems = try PropertyListDecoder().decode([FoodItem].self, from: data)
             } catch {
-                print("Unable to Decode favourite item (\(error))")
+                printDebug("Unable to Decode favourite item (\(error))")
             }
         }
     }
     
+    //Method to save favourite items in userdefault
     func saveFavItems()
     {
         do {
             let data = try PropertyListEncoder().encode(favItems)
             userDefaultStandard.set(data, forKey: KfavouriteItems)
         } catch {
-            print("Unable to Encode favourite item (\(error))")
+            printDebug("Unable to Encode favourite item (\(error))")
         }
     }
     
+    //Method to fetch current order in userdefault
     private func fetchCurrentOrder()
     {
         if let data = userDefaultStandard.data(forKey: KcurrentOrder) {
             do {
                 currentOrder = try PropertyListDecoder().decode(Order.self, from: data)
             } catch {
-                print("Unable to decode Current Order (\(error))")
+                printDebug("Unable to decode Current Order (\(error))")
             }
         }
     }
     
+    //Method to save current order in userdefault
     func saveCurrentOrder()
     {
         if currentOrder == nil
@@ -100,24 +111,25 @@ class Common: NSObject {
                 let data = try PropertyListEncoder().encode(currentOrder)
                 userDefaultStandard.set(data, forKey: KcurrentOrder)
             } catch {
-                print("Unable to Encode current order (\(error))")
+                printDebug("Unable to Encode current order (\(error))")
             }
         }
     }
     
+    //Method to fetch past orders from userdefault
     private func fetchPastOrders()
     {
         if let data = userDefaultStandard.data(forKey: KpastOrders)
         {
             do {
                 pastOrders = try PropertyListDecoder().decode([Order].self, from: data)
-                print(pastOrders.count)
             } catch {
-                print("Unable to decode past Order (\(error))")
+                printDebug("Unable to decode past Order (\(error))")
             }
         }
     }
     
+    //Method to save past orders in userdefault
     func savePastOrder()
     {
         if let data = userDefaultStandard.data(forKey: KpastOrders)
@@ -133,7 +145,7 @@ class Common: NSObject {
                 }
                 
             } catch {
-                print("Unable to decode past Order (\(error))")
+                printDebug("Unable to decode past Order (\(error))")
             }
         }
         else
@@ -143,7 +155,7 @@ class Common: NSObject {
                 pastOrders = [currentOrder!]
                 userDefaultStandard.set(data, forKey: KpastOrders)
             } catch {
-                print("Unable to Encode past order (\(error))")
+                printDebug("Unable to Encode past order (\(error))")
             }
         }
         
@@ -151,5 +163,15 @@ class Common: NSObject {
         let newOrderId = currentOrder?.orderId ?? 1 + 1
         userDefaultStandard.set(newOrderId, forKey: KcurrentOrderId)
         userDefaultStandard.removeObject(forKey: KcurrentOrder)
+    }
+}
+
+
+//Custom Print method
+//Description: Prints only in debug mode.
+func printDebug(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+    if kProduction
+    {
+        Swift.print(items)
     }
 }

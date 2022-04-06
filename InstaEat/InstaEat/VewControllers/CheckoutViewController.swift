@@ -20,6 +20,7 @@ class CheckoutViewController: UIViewController {
         tableView.rowHeight = 75
     }
     
+    //Update total item count method
     func updateCountLabel()
     {
         var totalCount = 0
@@ -30,6 +31,7 @@ class CheckoutViewController: UIViewController {
         totalCountLabel.text = "\(totalCount)"
     }
     
+    //Place order button action
     @IBAction func placeOrderButtonAction(_ sender: Any) {
         
         Common.shared.savePastOrder()
@@ -40,6 +42,7 @@ class CheckoutViewController: UIViewController {
 
 }
 
+//MARK: - UITableview Datasouce and Delegate
 extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate
 {
 
@@ -65,6 +68,7 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    //+ button action
     @objc func increaseItemButtonAction(_ sender: UIButton)
     {
         Common.shared.currentOrder?.items?[sender.tag].quantity! += 1
@@ -72,6 +76,7 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate
         updateCountLabel()
     }
     
+    //- button action
     @objc func decreaseItemButtonAction(_ sender: UIButton)
     {
         Common.shared.currentOrder?.items?[sender.tag].quantity! -= 1
