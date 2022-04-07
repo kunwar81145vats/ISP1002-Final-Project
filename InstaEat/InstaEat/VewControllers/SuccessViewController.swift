@@ -9,11 +9,30 @@ import UIKit
 
 class SuccessViewController: UIViewController {
 
+    @IBOutlet weak var successImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animateImageView()
+    }
+    
+    //Animate success imageview
+    func animateImageView()
+    {
+        UIView.animate(withDuration: 1.0, animations: {() -> Void in
+            self.successImageView.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
+        }, completion: {(_ finished: Bool) -> Void in
+            UIView.animate(withDuration: 1.0, animations: {() -> Void in
+                self.successImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        })
     }
     
     //View orders button action
