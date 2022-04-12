@@ -34,8 +34,6 @@ class HomeViewController: UIViewController {
     {
         checkoutButton.layer.cornerRadius = 5
         
-        UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
-
         if Common.shared.currentOrder == nil
         {
             checkoutButton.isHidden = true
