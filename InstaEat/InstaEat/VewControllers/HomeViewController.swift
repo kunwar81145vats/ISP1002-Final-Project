@@ -34,6 +34,8 @@ class HomeViewController: UIViewController {
     {
         checkoutButton.layer.cornerRadius = 5
         
+        UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+
         if Common.shared.currentOrder == nil
         {
             checkoutButton.isHidden = true
@@ -59,7 +61,7 @@ class HomeViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Back", style: .plain, target: nil, action: nil)
+            title: NSLocalizedString("Back", comment: ""), style: .plain, target: nil, action: nil)
     }
 
 }
